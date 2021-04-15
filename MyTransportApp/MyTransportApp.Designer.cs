@@ -33,26 +33,38 @@ namespace MyTransportApp
             this.StartortLabel = new System.Windows.Forms.Label();
             this.ZielortLabel = new System.Windows.Forms.Label();
             this.ZielortTextBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Verbindung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VerbindungSuchenButton = new System.Windows.Forms.Button();
+            this.VerbindungenGridView = new System.Windows.Forms.DataGridView();
+            this.VerbindungGroupBox = new System.Windows.Forms.GroupBox();
+            this.AbfahrtstafelGroupBox = new System.Windows.Forms.GroupBox();
+            this.AbfahrtstafelGridView = new System.Windows.Forms.DataGridView();
+            this.StartortAbfahrtstafelTextBox = new System.Windows.Forms.TextBox();
+            this.VerbindungSuchenAbfahrtstafelButton = new System.Windows.Forms.Button();
+            this.StartortAbfahrtstafelLabel = new System.Windows.Forms.Label();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Abfahrt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ankunft = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Dauer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Plattform = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.VerbindungenGridView)).BeginInit();
+            this.VerbindungGroupBox.SuspendLayout();
+            this.AbfahrtstafelGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AbfahrtstafelGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // StartortTextBox
             // 
-            this.StartortTextBox.Location = new System.Drawing.Point(12, 75);
+            this.StartortTextBox.Location = new System.Drawing.Point(21, 50);
             this.StartortTextBox.Name = "StartortTextBox";
-            this.StartortTextBox.Size = new System.Drawing.Size(149, 22);
+            this.StartortTextBox.Size = new System.Drawing.Size(243, 22);
             this.StartortTextBox.TabIndex = 0;
             // 
             // StartortLabel
             // 
             this.StartortLabel.AutoSize = true;
-            this.StartortLabel.Location = new System.Drawing.Point(9, 51);
+            this.StartortLabel.Location = new System.Drawing.Point(18, 26);
             this.StartortLabel.Name = "StartortLabel";
             this.StartortLabel.Size = new System.Drawing.Size(55, 17);
             this.StartortLabel.TabIndex = 2;
@@ -61,7 +73,7 @@ namespace MyTransportApp
             // ZielortLabel
             // 
             this.ZielortLabel.AutoSize = true;
-            this.ZielortLabel.Location = new System.Drawing.Point(203, 51);
+            this.ZielortLabel.Location = new System.Drawing.Point(328, 26);
             this.ZielortLabel.Name = "ZielortLabel";
             this.ZielortLabel.Size = new System.Drawing.Size(48, 17);
             this.ZielortLabel.TabIndex = 3;
@@ -69,42 +81,126 @@ namespace MyTransportApp
             // 
             // ZielortTextBox
             // 
-            this.ZielortTextBox.Location = new System.Drawing.Point(206, 75);
+            this.ZielortTextBox.Location = new System.Drawing.Point(331, 50);
             this.ZielortTextBox.Name = "ZielortTextBox";
-            this.ZielortTextBox.Size = new System.Drawing.Size(149, 22);
+            this.ZielortTextBox.Size = new System.Drawing.Size(243, 22);
             this.ZielortTextBox.TabIndex = 4;
             // 
-            // button1
+            // VerbindungSuchenButton
             // 
-            this.button1.Location = new System.Drawing.Point(394, 75);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(165, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Verbindung suchen";
-            this.button1.UseVisualStyleBackColor = true;
+            this.VerbindungSuchenButton.Location = new System.Drawing.Point(21, 88);
+            this.VerbindungSuchenButton.Name = "VerbindungSuchenButton";
+            this.VerbindungSuchenButton.Size = new System.Drawing.Size(553, 29);
+            this.VerbindungSuchenButton.TabIndex = 5;
+            this.VerbindungSuchenButton.Text = "Verbindung suchen";
+            this.VerbindungSuchenButton.UseVisualStyleBackColor = true;
+            this.VerbindungSuchenButton.Click += new System.EventHandler(this.VerbindungSuchenButton_Click);
             // 
-            // dataGridView1
+            // VerbindungenGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Verbindung,
+            this.VerbindungenGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.VerbindungenGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Abfahrt,
             this.Ankunft,
-            this.Dauer});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 120);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(547, 150);
-            this.dataGridView1.TabIndex = 6;
+            this.Dauer,
+            this.Plattform});
+            this.VerbindungenGridView.Location = new System.Drawing.Point(21, 131);
+            this.VerbindungenGridView.Name = "VerbindungenGridView";
+            this.VerbindungenGridView.RowHeadersWidth = 51;
+            this.VerbindungenGridView.RowTemplate.Height = 24;
+            this.VerbindungenGridView.Size = new System.Drawing.Size(553, 171);
+            this.VerbindungenGridView.TabIndex = 6;
             // 
-            // Verbindung
+            // VerbindungGroupBox
             // 
-            this.Verbindung.HeaderText = "Verbindung";
-            this.Verbindung.MinimumWidth = 6;
-            this.Verbindung.Name = "Verbindung";
-            this.Verbindung.ReadOnly = true;
-            this.Verbindung.Width = 125;
+            this.VerbindungGroupBox.Controls.Add(this.VerbindungenGridView);
+            this.VerbindungGroupBox.Controls.Add(this.StartortTextBox);
+            this.VerbindungGroupBox.Controls.Add(this.VerbindungSuchenButton);
+            this.VerbindungGroupBox.Controls.Add(this.StartortLabel);
+            this.VerbindungGroupBox.Controls.Add(this.ZielortTextBox);
+            this.VerbindungGroupBox.Controls.Add(this.ZielortLabel);
+            this.VerbindungGroupBox.Location = new System.Drawing.Point(12, 12);
+            this.VerbindungGroupBox.Name = "VerbindungGroupBox";
+            this.VerbindungGroupBox.Size = new System.Drawing.Size(587, 317);
+            this.VerbindungGroupBox.TabIndex = 7;
+            this.VerbindungGroupBox.TabStop = false;
+            this.VerbindungGroupBox.Text = "Verbindung suchen";
+            // 
+            // AbfahrtstafelGroupBox
+            // 
+            this.AbfahrtstafelGroupBox.Controls.Add(this.AbfahrtstafelGridView);
+            this.AbfahrtstafelGroupBox.Controls.Add(this.StartortAbfahrtstafelTextBox);
+            this.AbfahrtstafelGroupBox.Controls.Add(this.VerbindungSuchenAbfahrtstafelButton);
+            this.AbfahrtstafelGroupBox.Controls.Add(this.StartortAbfahrtstafelLabel);
+            this.AbfahrtstafelGroupBox.Location = new System.Drawing.Point(12, 351);
+            this.AbfahrtstafelGroupBox.Name = "AbfahrtstafelGroupBox";
+            this.AbfahrtstafelGroupBox.Size = new System.Drawing.Size(464, 317);
+            this.AbfahrtstafelGroupBox.TabIndex = 8;
+            this.AbfahrtstafelGroupBox.TabStop = false;
+            this.AbfahrtstafelGroupBox.Text = "Abfahrtstafel";
+            // 
+            // AbfahrtstafelGridView
+            // 
+            this.AbfahrtstafelGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.AbfahrtstafelGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn6});
+            this.AbfahrtstafelGridView.Location = new System.Drawing.Point(21, 131);
+            this.AbfahrtstafelGridView.Name = "AbfahrtstafelGridView";
+            this.AbfahrtstafelGridView.RowHeadersWidth = 51;
+            this.AbfahrtstafelGridView.RowTemplate.Height = 24;
+            this.AbfahrtstafelGridView.Size = new System.Drawing.Size(428, 171);
+            this.AbfahrtstafelGridView.TabIndex = 6;
+            // 
+            // StartortAbfahrtstafelTextBox
+            // 
+            this.StartortAbfahrtstafelTextBox.Location = new System.Drawing.Point(21, 46);
+            this.StartortAbfahrtstafelTextBox.Name = "StartortAbfahrtstafelTextBox";
+            this.StartortAbfahrtstafelTextBox.Size = new System.Drawing.Size(428, 22);
+            this.StartortAbfahrtstafelTextBox.TabIndex = 0;
+            // 
+            // VerbindungSuchenAbfahrtstafelButton
+            // 
+            this.VerbindungSuchenAbfahrtstafelButton.Location = new System.Drawing.Point(21, 88);
+            this.VerbindungSuchenAbfahrtstafelButton.Name = "VerbindungSuchenAbfahrtstafelButton";
+            this.VerbindungSuchenAbfahrtstafelButton.Size = new System.Drawing.Size(428, 29);
+            this.VerbindungSuchenAbfahrtstafelButton.TabIndex = 5;
+            this.VerbindungSuchenAbfahrtstafelButton.Text = "Verbindung suchen";
+            this.VerbindungSuchenAbfahrtstafelButton.UseVisualStyleBackColor = true;
+            // 
+            // StartortAbfahrtstafelLabel
+            // 
+            this.StartortAbfahrtstafelLabel.AutoSize = true;
+            this.StartortAbfahrtstafelLabel.Location = new System.Drawing.Point(18, 26);
+            this.StartortAbfahrtstafelLabel.Name = "StartortAbfahrtstafelLabel";
+            this.StartortAbfahrtstafelLabel.Size = new System.Drawing.Size(55, 17);
+            this.StartortAbfahrtstafelLabel.TabIndex = 2;
+            this.StartortAbfahrtstafelLabel.Text = "Startort";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Startort";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Abfahrt";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.HeaderText = "Plattform";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 125;
             // 
             // Abfahrt
             // 
@@ -130,22 +226,30 @@ namespace MyTransportApp
             this.Dauer.ReadOnly = true;
             this.Dauer.Width = 125;
             // 
+            // Plattform
+            // 
+            this.Plattform.HeaderText = "Plattform";
+            this.Plattform.MinimumWidth = 6;
+            this.Plattform.Name = "Plattform";
+            this.Plattform.ReadOnly = true;
+            this.Plattform.Width = 125;
+            // 
             // MyTransportApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.ZielortTextBox);
-            this.Controls.Add(this.ZielortLabel);
-            this.Controls.Add(this.StartortLabel);
-            this.Controls.Add(this.StartortTextBox);
+            this.ClientSize = new System.Drawing.Size(1022, 767);
+            this.Controls.Add(this.AbfahrtstafelGroupBox);
+            this.Controls.Add(this.VerbindungGroupBox);
             this.Name = "MyTransportApp";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VerbindungenGridView)).EndInit();
+            this.VerbindungGroupBox.ResumeLayout(false);
+            this.VerbindungGroupBox.PerformLayout();
+            this.AbfahrtstafelGroupBox.ResumeLayout(false);
+            this.AbfahrtstafelGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AbfahrtstafelGridView)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -155,12 +259,21 @@ namespace MyTransportApp
         private System.Windows.Forms.Label StartortLabel;
         private System.Windows.Forms.Label ZielortLabel;
         private System.Windows.Forms.TextBox ZielortTextBox;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Verbindung;
+        private System.Windows.Forms.Button VerbindungSuchenButton;
+        private System.Windows.Forms.DataGridView VerbindungenGridView;
+        private System.Windows.Forms.GroupBox VerbindungGroupBox;
+        private System.Windows.Forms.GroupBox AbfahrtstafelGroupBox;
+        private System.Windows.Forms.DataGridView AbfahrtstafelGridView;
+        private System.Windows.Forms.TextBox StartortAbfahrtstafelTextBox;
+        private System.Windows.Forms.Button VerbindungSuchenAbfahrtstafelButton;
+        private System.Windows.Forms.Label StartortAbfahrtstafelLabel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Abfahrt;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ankunft;
         private System.Windows.Forms.DataGridViewTextBoxColumn Dauer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Plattform;
     }
 }
 
