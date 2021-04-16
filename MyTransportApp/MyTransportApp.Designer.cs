@@ -60,7 +60,7 @@ namespace MyTransportApp
             this.StartortTextBox.Location = new System.Drawing.Point(21, 50);
             this.StartortTextBox.Name = "StartortTextBox";
             this.StartortTextBox.Size = new System.Drawing.Size(274, 22);
-            this.StartortTextBox.TabIndex = 0;
+            this.StartortTextBox.TabIndex = 1;
             // 
             // StartortLabel
             // 
@@ -85,14 +85,14 @@ namespace MyTransportApp
             this.ZielortTextBox.Location = new System.Drawing.Point(331, 50);
             this.ZielortTextBox.Name = "ZielortTextBox";
             this.ZielortTextBox.Size = new System.Drawing.Size(274, 22);
-            this.ZielortTextBox.TabIndex = 4;
+            this.ZielortTextBox.TabIndex = 2;
             // 
             // VerbindungSuchenButton
             // 
             this.VerbindungSuchenButton.Location = new System.Drawing.Point(21, 88);
             this.VerbindungSuchenButton.Name = "VerbindungSuchenButton";
             this.VerbindungSuchenButton.Size = new System.Drawing.Size(584, 29);
-            this.VerbindungSuchenButton.TabIndex = 5;
+            this.VerbindungSuchenButton.TabIndex = 3;
             this.VerbindungSuchenButton.Text = "Verbindung suchen";
             this.VerbindungSuchenButton.UseVisualStyleBackColor = true;
             this.VerbindungSuchenButton.Click += new System.EventHandler(this.VerbindungSuchenButton_Click);
@@ -113,7 +113,8 @@ namespace MyTransportApp
             this.VerbindungenGridView.RowHeadersWidth = 51;
             this.VerbindungenGridView.RowTemplate.Height = 24;
             this.VerbindungenGridView.Size = new System.Drawing.Size(753, 171);
-            this.VerbindungenGridView.TabIndex = 6;
+            this.VerbindungenGridView.TabIndex = 0;
+            this.VerbindungenGridView.TabStop = false;
             // 
             // Startort
             // 
@@ -203,14 +204,15 @@ namespace MyTransportApp
             this.AbfahrtstafelGridView.RowHeadersWidth = 51;
             this.AbfahrtstafelGridView.RowTemplate.Height = 24;
             this.AbfahrtstafelGridView.Size = new System.Drawing.Size(280, 171);
-            this.AbfahrtstafelGridView.TabIndex = 6;
+            this.AbfahrtstafelGridView.TabIndex = 0;
+            this.AbfahrtstafelGridView.TabStop = false;
             // 
             // StartortAbfahrtstafelTextBox
             // 
             this.StartortAbfahrtstafelTextBox.Location = new System.Drawing.Point(21, 46);
             this.StartortAbfahrtstafelTextBox.Name = "StartortAbfahrtstafelTextBox";
             this.StartortAbfahrtstafelTextBox.Size = new System.Drawing.Size(280, 22);
-            this.StartortAbfahrtstafelTextBox.TabIndex = 0;
+            this.StartortAbfahrtstafelTextBox.TabIndex = 4;
             // 
             // VerbindungSuchenAbfahrtstafelButton
             // 
