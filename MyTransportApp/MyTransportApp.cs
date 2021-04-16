@@ -57,21 +57,29 @@ namespace MyTransportApp
 
         private void VerbindungSuchenAbfahrtstafelButton_Click(object sender, EventArgs e)
         {
-            if (StartortAbfahrtstafelTextBox.Text.Length < 1)
+            try
             {
-                MessageBox.Show("Geben Sie bitte einen Startort ein.");
-            }
-            else
-            {
-                AbfahrtstafelGridView.Rows.Clear();
-                string StartortId = transport.GetStations(StartortAbfahrtstafelTextBox.Text).StationList[0].Id;
-                var StartortAbfahrtstafel = transport.GetStationBoard(StartortAbfahrtstafelTextBox.Text, StartortId).Entries;
-                foreach (StationBoard connection in StartortAbfahrtstafel)
+                if (StartortAbfahrtstafelTextBox.Text.Length < 1)
                 {
-                    string Zielort = connection.To;
-                    string Abfahrt = connection.Stop.Departure.ToString("HH:mm");
-                    AbfahrtstafelGridView.Rows.Add(Zielort, Abfahrt);
+                    MessageBox.Show("Geben Sie bitte einen Startort ein.");
                 }
+                else
+                {
+                    AbfahrtstafelGridView.Rows.Clear();
+                    string StartortId = transport.GetStations(StartortAbfahrtstafelTextBox.Text).StationList[0].Id;
+                    var StartortAbfahrtstafel = transport.GetStationBoard(StartortAbfahrtstafelTextBox.Text, StartortId).Entries;
+                    foreach (StationBoard connection in StartortAbfahrtstafel)
+                    {
+                        string Zielort = connection.To;
+                        string Abfahrt = connection.Stop.Departure.ToString("HH:mm");
+                        AbfahrtstafelGridView.Rows.Add(Zielort, Abfahrt);
+                    }
+                }
+            }
+            catch
+            {
+                StartortAbfahrtstafelTextBox.Clear();
+                MessageBox.Show("Ungültige Eingabe.");
             }
         }
     }
